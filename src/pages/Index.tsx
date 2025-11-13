@@ -110,6 +110,98 @@ const Index = () => {
       </section>
 
       <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16">
+            Что такое соцконтракт и как его получить?
+          </h2>
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <div className="bg-card p-8 rounded-lg border-2 border-primary/30 space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Icon name="Info" className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-3">Что это такое?</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Социальный контракт — это программа государственной поддержки, по которой можно получить 
+                      <span className="text-primary font-semibold"> до 350 000 рублей безвозмездно</span> на открытие своего дела. 
+                      Деньги не нужно возвращать, если вы выполните условия контракта.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card p-8 rounded-lg border-2 border-border space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Icon name="Users" className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-3">Кто может получить?</h3>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                        <span>Граждане РФ с доходом ниже прожиточного минимума</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                        <span>Многодетные семьи</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                        <span>Безработные, состоящие на учете</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                        <span>Выпускники детских домов</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-8 rounded-lg border-2 border-primary/30">
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                  <Icon name="ClipboardList" className="text-primary" size={28} />
+                  Процесс получения
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    { step: '1', text: 'Обратитесь в МФЦ или соцзащиту по месту жительства' },
+                    { step: '2', text: 'Подготовьте бизнес-план с финансовым обоснованием' },
+                    { step: '3', text: 'Соберите пакет документов (паспорт, СНИЛС, справки о доходах)' },
+                    { step: '4', text: 'Пройдите комиссию и защитите свой проект' },
+                    { step: '5', text: 'Получите решение в течение 30 дней' },
+                    { step: '6', text: 'Откройте ИП и получите деньги на расчетный счет' }
+                  ].map((item, index) => (
+                    <div key={index} className="flex gap-4 items-start">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">
+                        {item.step}
+                      </div>
+                      <p className="text-foreground pt-1">{item.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-card p-6 rounded-lg border-2 border-primary/30">
+                <p className="text-center text-sm text-muted-foreground mb-4">
+                  <Icon name="AlertCircle" className="inline-block text-primary mr-2" size={20} />
+                  Самая частая причина отказа — неправильный бизнес-план
+                </p>
+                <Button className="w-full" size="lg">
+                  Заказать профессиональный бизнес-план
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16">
             Мы превращаем вашу идею в одобренный бизнес-план
