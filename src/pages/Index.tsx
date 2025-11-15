@@ -201,6 +201,72 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 px-4 bg-gradient-to-br from-destructive/20 via-background to-destructive/20">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-card border-4 border-destructive/50 rounded-lg p-8 md:p-12 space-y-8 shadow-2xl">
+            <div className="text-center space-y-4">
+              <div className="inline-block bg-destructive/20 px-6 py-2 rounded-full border-2 border-destructive">
+                <p className="text-destructive font-bold uppercase tracking-wider flex items-center gap-2 justify-center">
+                  <Icon name="AlertTriangle" size={20} />
+                  Важная информация
+                </p>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold">
+                Квоты на соцконтракт по районам ограничены!
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Успейте подать заявку до исчерпания финансирования
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-secondary/50 p-6 rounded-lg border-2 border-destructive/30">
+                <div className="flex items-start gap-4">
+                  <Icon name="Clock" className="text-destructive flex-shrink-0" size={32} />
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Бюджет расходуется быстро</h3>
+                    <p className="text-muted-foreground text-sm">
+                      В некоторых регионах квоты заполняются уже к середине года. 
+                      Чем раньше подадите заявку — тем выше шансы.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-secondary/50 p-6 rounded-lg border-2 border-destructive/30">
+                <div className="flex items-start gap-4">
+                  <Icon name="TrendingDown" className="text-destructive flex-shrink-0" size={32} />
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Конкуренция растет</h3>
+                    <p className="text-muted-foreground text-sm">
+                      С каждым годом о программе узнают всё больше людей. 
+                      Количество заявок увеличивается, а бюджет остается прежним.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-destructive/10 to-primary/10 p-6 rounded-lg border-2 border-primary/50">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                    <Icon name="Zap" className="text-primary-foreground" size={32} />
+                  </div>
+                  <div>
+                    <p className="font-bold text-lg">Не упустите свой шанс!</p>
+                    <p className="text-sm text-muted-foreground">Оставьте заявку сегодня и увеличьте шансы на одобрение</p>
+                  </div>
+                </div>
+                <Button size="lg" className="whitespace-nowrap font-bold shadow-lg">
+                  Подать заявку сейчас
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16">
@@ -326,6 +392,67 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16">
+            Ответы на частые вопросы
+          </h2>
+          <div className="space-y-4">
+            {[
+              {
+                question: 'Нужно ли возвращать деньги по соцконтракту?',
+                answer: 'Нет, это безвозмездная помощь. Деньги не нужно возвращать, если вы выполните условия контракта — откроете ИП, используете средства по назначению и будете вести бизнес минимум 1 год.'
+              },
+              {
+                question: 'Сколько времени занимает получение соцконтракта?',
+                answer: 'В среднем от подачи заявки до получения денег проходит 1-2 месяца. Комиссия рассматривает документы до 30 дней, затем еще 10-15 дней на оформление ИП и перечисление средств.'
+              },
+              {
+                question: 'На что можно потратить деньги?',
+                answer: 'Средства можно использовать на покупку оборудования, аренду помещения, закупку товара, обучение, регистрацию ИП, рекламу — всё, что связано с открытием и запуском бизнеса. Траты должны быть указаны в бизнес-плане.'
+              },
+              {
+                question: 'Что если мне откажут?',
+                answer: 'При работе с нами вероятность отказа минимальна — 95% одобрений. Если всё же получите отказ, мы бесплатно доработаем документы и поможем подать заявку повторно через 6 месяцев.'
+              },
+              {
+                question: 'Обязательно ли иметь готовую бизнес-идею?',
+                answer: 'Нет! Мы поможем подобрать подходящую бизнес-идею исходя из ваших навыков, опыта и условий вашего региона. Также разработаем детальный бизнес-план с нуля.'
+              },
+              {
+                question: 'Сколько стоят ваши услуги?',
+                answer: 'Первичная консультация — бесплатно. Стоимость разработки бизнес-плана и полного сопровождения рассчитывается индивидуально и составляет 15-25% от суммы гранта. Оплата после получения средств.'
+              }
+            ].map((faq, index) => (
+              <Card key={index} className="bg-card hover:bg-secondary/30 transition-all border-2 border-border">
+                <CardContent className="p-6">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                        <Icon name="HelpCircle" className="text-primary" size={20} />
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-bold">{faq.question}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg text-muted-foreground mb-6">
+              Остались вопросы? Получите бесплатную консультацию прямо сейчас
+            </p>
+            <Button size="lg" className="font-bold">
+              Задать свой вопрос
+            </Button>
           </div>
         </div>
       </section>
