@@ -465,46 +465,108 @@ const Index = () => {
               Ваш бизнес может стать реальностью уже через 30 дней
             </h2>
             <p className="text-xl text-muted-foreground">
-              Места на бесплатную консультацию ограничены. Оставьте заявку прямо сейчас, 
-              и мы перезвоним вам в течение 15 минут.
+              Свяжитесь со мной удобным способом для бесплатной консультации
             </p>
-            <Card className="bg-card border-2 border-primary/30 shadow-2xl">
-              <CardContent className="p-8">
-                <form onSubmit={(e) => handleSubmit(e, 'final')} className="space-y-4">
-                  <Input
-                    placeholder="Ваше имя"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="h-12"
-                  />
-                  <Input
-                    placeholder="+7 (___) ___-__-__"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="h-12"
-                  />
-                  <Button type="submit" size="lg" className="w-full h-14 text-lg font-bold">
-                    Забронировать консультацию!
-                  </Button>
-                  <p className="text-xs text-muted-foreground text-center">
-                    Ваши данные конфиденциальны и защищены
-                  </p>
-                </form>
-              </CardContent>
-            </Card>
+            <div className="grid md:grid-cols-2 gap-4 max-w-lg mx-auto">
+              <a
+                href="https://t.me/RifatSaitgalin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 bg-[#0088cc] hover:bg-[#0077b3] text-white font-bold py-6 px-8 rounded-lg transition-all hover:scale-105 shadow-lg"
+              >
+                <Icon name="Send" size={24} />
+                <span>Telegram</span>
+              </a>
+              <a
+                href="https://wa.me/89656410740"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1fb855] text-white font-bold py-6 px-8 rounded-lg transition-all hover:scale-105 shadow-lg"
+              >
+                <Icon name="MessageCircle" size={24} />
+                <span>WhatsApp</span>
+              </a>
+            </div>
+            <div className="flex items-center justify-center gap-2 text-lg text-muted-foreground">
+              <Icon name="Phone" size={20} />
+              <a href="tel:+89656410740" className="hover:text-primary transition-colors font-semibold">
+                +7 (965) 641-07-40
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <footer className="py-12 px-4 bg-secondary border-t border-border">
-        <div className="container mx-auto text-center space-y-4">
-          <p className="text-muted-foreground">
-            © 2024 Соцконтракт 350 000. Все права защищены.
-          </p>
-          <div className="flex justify-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">Политика конфиденциальности</a>
-            <a href="#" className="hover:text-primary transition-colors">Условия использования</a>
-            <a href="#" className="hover:text-primary transition-colors">Контакты</a>
+      <footer className="py-16 px-4 bg-secondary border-t border-border">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold">Соцконтракт 350 000</h3>
+              <p className="text-muted-foreground text-sm">
+                Помогаем получить государственную поддержку для открытия бизнеса
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="font-bold">Контакты</h4>
+              <div className="space-y-2 text-sm">
+                <a href="tel:+89656410740" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                  <Icon name="Phone" size={16} />
+                  +7 (965) 641-07-40
+                </a>
+                <a href="https://t.me/RifatSaitgalin" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                  <Icon name="Send" size={16} />
+                  Telegram
+                </a>
+                <a href="https://wa.me/89656410740" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                  <Icon name="MessageCircle" size={16} />
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="font-bold">Социальные сети</h4>
+              <div className="flex gap-4">
+                <a
+                  href="https://t.me/RifatSaitgalin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-[#0088cc] hover:bg-[#0077b3] flex items-center justify-center text-white transition-all hover:scale-110"
+                  aria-label="Telegram"
+                >
+                  <Icon name="Send" size={20} />
+                </a>
+                <a
+                  href="https://wa.me/89656410740"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-[#25D366] hover:bg-[#1fb855] flex items-center justify-center text-white transition-all hover:scale-110"
+                  aria-label="WhatsApp"
+                >
+                  <Icon name="MessageCircle" size={20} />
+                </a>
+                <a
+                  href="https://www.instagram.com/rif.sr1?igsh=d2lpbzdpM3Y4NmNt&utm_source=qr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F56040] hover:opacity-90 flex items-center justify-center text-white transition-all hover:scale-110"
+                  aria-label="Instagram"
+                >
+                  <Icon name="Instagram" size={20} />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-8 border-t border-border text-center space-y-4">
+            <p className="text-muted-foreground text-sm">
+              © 2024 Соцконтракт 350 000. Все права защищены.
+            </p>
+            <div className="flex justify-center gap-6 text-xs text-muted-foreground">
+              <a href="#" className="hover:text-primary transition-colors">Политика конфиденциальности</a>
+              <a href="#" className="hover:text-primary transition-colors">Условия использования</a>
+            </div>
           </div>
         </div>
       </footer>
